@@ -7,6 +7,16 @@
 
 // any CSS you import will output into a single css file (app.scss in this case)
 import './styles/app.scss';
+import './styles/vendors/glightbox/css/glightbox.css';
+import './styles/css/fontawesome.css';
+import './styles/css/style.css';
+
+import './styles/js/bootstrap.bundle.js';
+import './styles/js/bootstrap.esm.js';
+import './styles/js/bootstrap.js';
+import './styles/vendors/glightbox/js/glightbox.js';
 
 // start the Stimulus application
 import './bootstrap';
+
+

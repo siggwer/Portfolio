@@ -20,7 +20,7 @@ class ViewResponder
     /**
      * @var Environment
      */
-    protected $twig;
+    protected Environment $twig;
 
     /**
      * ViewResponder constructor.
@@ -42,7 +42,7 @@ class ViewResponder
      * @throws RuntimeError
      * @throws SyntaxError
      */
-    public function __invoke(string $template, array $params = [])
+    public function __invoke(string $template, array $params = []): Response
     {
         return new Response(
             $this->twig->render($template, $params)
