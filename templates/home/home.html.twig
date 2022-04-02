@@ -1,11 +1,23 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <!-- ======= Hero Section ======= -->
+    <!-- ======= Intro Section ======= -->
 
     {% include("intro/intro.html.twig") %}
 
-    <!-- End Hero -->
+    <!-- End Intro -->
+
+    <!-- ======= Campanies Section ======= -->
+
+    {% include("campanies/campanies.html.twig") %}
+
+    <!-- End Campanies -->
+
+    <!-- ======= Footer Section ======= -->
+
+    {% include("footer/footer.html.twig") %}
+
+    <!-- End Footer -->
 {% endblock %}
 {% block javascripts %}
     {{ parent() }}
