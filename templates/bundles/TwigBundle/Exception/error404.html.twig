@@ -1,0 +1,14 @@
+{% extends 'error/layout_error.html.twig' %}
+
+{% block body %}
+    <div id="error">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center">
+                <h1 class="error">{{ 'page_not_found'|trans }}</h1>
+                <p>
+                    {{ 'page_not_found'|trans }} <a href="{{ path('home') }}">{{ 'back'|trans }}</a>
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

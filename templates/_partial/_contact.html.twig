@@ -1,0 +1,32 @@
+<div class="container-xxl pb-5" id="contact">
+    <div class="container py-5">
+        <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="col-lg-6">
+                <h1 class="display-5 mb-0">Travaillons ensemble</h1>
+            </div>
+            <div class="col-lg-6 text-lg-end">
+                <a class="btn btn-primary py-3 px-5" href="#contact-form">Discutons de votre projet</a>
+            </div>
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="text-center">
+                    <img src="{{ asset('assets/img/contact_1024x1024.png') }}" alt="Informatique, Développement Web et Cybersécurité" class="img-fluid rounded">
+                </div>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-square btn-primary me-2" href="https://x.com/siggwer"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-square btn-primary me-2" href="https://github.com/siggwer"><i class="fab fa-github"></i></a>
+                    <a class="btn btn-square btn-primary me-2" href="https://www.linkedin.com/in/jeromesauvage/"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <p class="mb-4">Contactez-moi.</p>
+                <form id="contact-form">
+                    <div class="row g-3">
+                        {% include('_partial/_form.html.twig') %}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

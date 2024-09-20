@@ -1,0 +1,46 @@
+{{ form_start(contactForm) }}
+{{ form_errors(contactForm) }}
+{{ form_widget(contactForm._token) }}
+<div class="col-md-6">
+    <div class="form-floating">
+        {{ form_row(contactForm.name, {
+            'attr': {'class': 'form-control', 'placeholder': 'Votre nom'},
+            'label_attr': {'class': 'form-label'}
+        }) }}
+    </div>
+</div>
+
+<div class="col-md-6">
+    <div class="form-floating">
+        {{ form_row(contactForm.email, {
+            'attr': {'class': 'form-control', 'placeholder': 'Votre email'},
+            'label_attr': {'class': 'form-label'}
+        }) }}
+    </div>
+</div>
+
+<div class="col-12">
+    <div class="form-floating">
+        {{ form_row(contactForm.subject, {
+            'attr': {'class': 'form-control', 'placeholder': 'Sujet'},
+            'label_attr': {'class': 'form-label'}
+        }) }}
+    </div>
+</div>
+
+<div class="col-12">
+    <div class="form-floating">
+        {{ form_row(contactForm.message, {
+            'attr': {'class': 'form-control', 'style': 'height: 100px', 'placeholder': 'Laissez un message ici'},
+            'label_attr': {'class': 'form-label'}
+        }) }}
+    </div>
+</div>
+
+<div class="col-12">
+    <button class="btn btn-primary py-3 px-5" type="submit">
+        Envoyer le message
+    </button>
+</div>
+
+{{ form_end(contactForm, { render_rest: false }) }}
