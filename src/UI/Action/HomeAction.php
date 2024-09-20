@@ -22,27 +22,19 @@ class HomeAction extends AbstractController
 
     /**
      * @param Request $request
-     *
+     * @param ContactHandler $contactHandler
      * @return Response
      */
     #[Route('/', name: 'app_home', methods: ['GET', 'POST'])]
-    public function home(
-        Request $request
+    public function __invoke(
+        Request $request,
+        ContactHandler $contactHandler
     ): Response
     {
-        // Appel de la méthode handle() pour initialiser le formulaire
-//        $isHandled = $this->contactHandler->handle($request);
-
-        // Si le formulaire est soumis et valide, on peut rediriger
-//        if ($isHandled) {
-//            return $viewResponder('app_home');
-//        }
-
         if ($this->contactHandler->handle($request, new ContactDto())) {
             return $this->redirectToRoute('app_home');
         }
 
-        // Si le formulaire n'est pas soumis ou n'est pas valide, on l'affiche
         return $this->render(
             'home/index.html.twig',
             [

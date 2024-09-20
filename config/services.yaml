@@ -7,7 +7,7 @@ parameters:
     locale: 'fr'
     paramsMailApp:
         name: 'Jérôme Sauvage'
-        email: 'jerome.sauvage.tic@gmail.com'
+        email: 'test@test.com'
 services:
     # default configuration for services in *this* file
     _defaults:

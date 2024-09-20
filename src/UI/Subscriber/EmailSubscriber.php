@@ -4,12 +4,10 @@ declare(strict_types=1);
 
 namespace App\UI\Subscriber;
 
-
-
+use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use App\UI\Service\MailerService;
 use App\UI\Event\ContactEvent;
-use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
 
 class EmailSubscriber implements EventSubscriberInterface
 {

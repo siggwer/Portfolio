@@ -43,7 +43,6 @@ class ContactHandler extends AbstractHandler
      */
     public function process($data = null): void
     {
-        dd($data);
         $event = new ContactEvent(
             $data->getName(),
             $data->getEmail(),
@@ -54,18 +53,6 @@ class ContactHandler extends AbstractHandler
         $this->eventDispatcher->dispatch($event, ContactEvent::NAME);
         $this->flashService->addMessage('success', 'Le mail a bien été envoyé');
 
-//        if ($data instanceof ContactDto) {
-//            $this->mailerService->sendContactEmail(
-//                $data->getEmail(),
-//                $data->getName(),
-//                $data = [
-//                    'name' => $data->getName(),
-//                    'email' => $data->getEmail(),
-//                    'subject' =>  $data->getSubject(),
-//                    'message' => $data->getMessage(),
-//                ]
-//            );
-//        }
     }
 
     /**

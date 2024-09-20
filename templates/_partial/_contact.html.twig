@@ -21,7 +21,7 @@
             </div>
             <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                 <p class="mb-4">Contactez-moi.</p>
-                <form id="contact-form">
+                <form id="contact-form"  action="{{ path('app_home') }}" method="post">
                     <div class="row g-3">
                         {% include('_partial/_form.html.twig') %}
                     </div>

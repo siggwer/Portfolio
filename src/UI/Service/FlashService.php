@@ -8,40 +8,6 @@ use Symfony\Component\HttpFoundation\RequestStack;
 
 readonly class FlashService
 {
-//    /**
-//     * @var FlashBagInterface
-//     */
-//    private FlashBagInterface $flashBag;
-//
-//    /**
-//     * @param SessionInterface $session
-//     */
-//    public function __construct(private SessionInterface $session)
-//    {
-//        // On récupère le FlashBag à partir de la session
-//        $this->flashBag = $session->getFlashBag();
-//    }
-//
-//    /**
-//     * @param string $message
-//     *
-//     * @return void
-//     */
-//    public function addSuccess(string $message): void
-//    {
-//        $this->flashBag->add('success', $message);
-//    }
-//
-//    /**
-//     * @param string $message
-//     *
-//     * @return void
-//     */
-//    public function addError(string $message): void
-//    {
-//        $this->flashBag->add('error', $message);
-//    }
-
     /**
      * @var bool|null
      */

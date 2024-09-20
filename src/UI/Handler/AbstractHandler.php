@@ -13,65 +13,6 @@ use LogicException;
 
 #[AllowDynamicProperties] abstract class AbstractHandler
 {
-//    /**
-//     * @var FormFactoryInterface
-//     */
-//    private FormFactoryInterface $formFactory;
-//
-//    /**
-//     * @var FormInterface
-//     */
-//    private FormInterface $form;
-//
-//    /**
-//     * @param FormFactoryInterface $formFactory
-//     *
-//     * @return void
-//     */
-//    public function setFormFactory(FormFactoryInterface $formFactory): void
-//    {
-//        $this->formFactory = $formFactory;
-//    }
-//
-//    /**
-//     * @param $data
-//     *
-//     * @return void
-//     */
-//    abstract public function process($data = null): void;
-//
-//    /**
-//     * @return string
-//     */
-//    abstract public function getFormType(): string;
-//
-//    /**
-//     * @param Request $request
-//     * @param mixed|null $data
-//     *
-//     * @return bool
-//     */
-//    public function handle(Request $request, mixed $data = null): bool
-//    {
-//        $this->form = $this->formFactory->create($this->getFormType(), $data)->handleRequest($request);
-//
-//        if ($this->form->isSubmitted() && $this->form->isValid()) {
-//            $this->process($data);
-//
-//            return true;
-//        }
-//
-//        return false;
-//    }
-//
-//    /**
-//     * @return FormView
-//     */
-//    public function createView(): FormView
-//    {
-//        return $this->form->createView();
-//    }
-
     /**
      * @var FormFactoryInterface
      */
