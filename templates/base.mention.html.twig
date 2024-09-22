@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Jérôme Sauvage{% endblock %}</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{{ asset('assets/lib/animate/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/docs.css') }}" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+
+    {% block stylesheets %}
+    {% endblock %}
+
+    {% block javascripts %}
+    {% endblock %}
+</head>
+<body data-bs-theme="auto" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+{% if app.request.hasPreviousSession %}
+    {% for label, messages in app.flashes(['success']) %}
+        {% for message in messages %}
+            {% include("flash_message/_success_flash.html.twig") %}
+        {% endfor %}
+    {% endfor %}
+    {% for label, messages in app.flashes(['error']) %}
+        {% for message in messages %}
+            {% include("flash_message/_error_flash.html.twig") %}
+        {% endfor %}
+    {% endfor %}
+{% endif %}
+
+
+{% block body %}
+{% endblock %}
+
+<!-- JavaScript Libraries -->
+<script src="{{ asset('assets/js/jquery-3.7.1.min.js') }}"></script>
+<script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('assets/lib/wow/wow.min.js') }}"></script>
+<script src="{{ asset('assets/lib/easing/easing.min.js') }}"></script>
+
+<!-- Template Javascript -->
+<script src="{{ asset('assets/js/main-mention.js') }}"></script>
+
+<!-- Tarte aux citrons RGPD -->
+<script src="{{ asset('assets/lib/tarteaucitron/tarteaucitron.js') }}"></script>
+<script type="text/javascript">
+    tarteaucitron.init({
+        "privacyUrl": "", /* Privacy policy url */
+        "bodyPosition": "bottom", /* or top to bring it as first element for accessibility */
+
+        "hashtag": "#tarteaucitron", /* Open the panel with this hashtag */
+        "cookieName": "tarteaucitron", /* Cookie name */
+
+        "orientation": "middle", /* Banner position (top - bottom) */
+
+        "groupServices": false, /* Group services by category */
+        "showDetailsOnClick": true, /* Click to expand the description */
+        "serviceDefaultState": "wait", /* Default state (true - wait - false) */
+
+        "showAlertSmall": false, /* Show the small banner on bottom right */
+        "cookieslist": true, /* Show the cookie list */
+
+        "closePopup": true, /* Show a close X on the banner */
+
+        "showIcon": true, /* Show cookie icon to manage cookies */
+        //"iconSrc": "", /* Optionnal: URL or base64 encoded image */
+        "iconPosition": "BottomLeft", /* BottomRight, BottomLeft, TopRight and TopLeft */
+
+        "adblocker": false, /* Show a Warning if an adblocker is detected */
+
+        "DenyAllCta": true, /* Show the deny all button */
+        "AcceptAllCta": true, /* Show the accept all button when highPrivacy on */
+        "highPrivacy": true, /* HIGHLY RECOMMANDED Disable auto consent */
+        "alwaysNeedConsent": false, /* Ask the consent for "Privacy by design" services */
+
+        "handleBrowserDNTRequest": false, /* If Do Not Track == 1, disallow all */
+
+        "removeCredit": false, /* Remove credit link */
+        "moreInfoLink": true, /* Show more info link */
+
+        "useExternalCss": false, /* If false, the tarteaucitron.css file will be loaded */
+        "useExternalJs": false, /* If false, the tarteaucitron.js file will be loaded */
+
+        //"cookieDomain": ".my-multisite-domaine.fr", /* Shared cookie for multisite */
+
+        "readmoreLink": "", /* Change the default readmore link */
+
+        "mandatory": true, /* Show a message about mandatory cookies */
+        "mandatoryCta": true, /* Show the disabled accept button when mandatory on */
+
+        //"customCloserId": "", /* Optional a11y: Custom element ID used to open the panel */
+
+        "googleConsentMode": true, /* Enable Google Consent Mode v2 for Google ads and GA4 */
+
+        "partnersList": false /* Show the number of partners on the popup/middle banner */
+    });
+    window.tarteaucitronForceLanguage = 'fr';
+</script>
+{#    <script type="text/javascript"> #}
+{#        (tarteaucitron.job = tarteaucitron.job || []).push('gcmfunctionality'); #}
+{#        (tarteaucitron.job = tarteaucitron.job || []).push('gcmanalyticsstorage'); #}
+{#    </script> #}
+<script type="text/javascript">
+    (tarteaucitron.job = tarteaucitron.job || []).push('serviceperso');
+    (tarteaucitron.job = tarteaucitron.job || []).push('gcmfunctionality');
+    (tarteaucitron.job = tarteaucitron.job || []).push('gcmpersonalization');
+</script>
+
+
+</body>
+</html>

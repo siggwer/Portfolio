@@ -1,0 +1,112 @@
+{% extends 'base.mention.html.twig' %}
+
+{% block title %}Politique de confidentialité{% endblock %}
+
+{% block body %}
+    <!-- Spinner Start -->
+    {% include('_partial/_spinner.html.twig') %}
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    {% include('_partial/_navbar_mention.html.twig') %}
+    <!-- Navbar End -->
+
+    <div class="container-xxl py-6 pb-5" id="mention">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Le titre principal déplacé au-dessus du texte et centré -->
+                <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="display-5 mb-5 text-center">Politique de Confidentialité</h1>
+                </div>
+
+                <!-- Début des informations légales - Colonne gauche -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+
+                    <h2>PRÉAMBULE</h2>
+                    <p>La protection de votre vie privée est essentielle pour moi. La présente politique de confidentialité, ci-après la « Politique », vise à expliquer comment vos données personnelles sont collectées, utilisées et protégées sur notre site web [Nom du site], conformément aux réglementations en vigueur, en particulier le Règlement Général sur la Protection des Données (RGPD) et la loi française.</p>
+                    <p>En utilisant notre site, vous acceptez les termes de cette Politique. Si vous refusez ces termes, veuillez ne pas utiliser le site ou ne pas nous transmettre vos informations personnelles.</p>
+
+                    <h2>ARTICLE 1 : IDENTITÉ DU RESPONSABLE DU TRAITEMENT</h2>
+                    <p><strong>Responsable du traitement des données :</strong></p>
+                    <p>Nom : [Nom du responsable ou de l’entreprise]</p>
+                    <p>Adresse : [Adresse du siège social]</p>
+                    <p>Email : [Adresse e-mail de contact]</p>
+                    <p>Téléphone : [Numéro de téléphone]</p>
+                    <p>Pour toute question concernant la gestion de vos données personnelles, vous pouvez nous contacter aux coordonnées ci-dessus.</p>
+
+                    <h2>ARTICLE 2 : DONNÉES PERSONNELLES COLLECTÉES</h2>
+                    <h3>2.1. Données fournies volontairement</h3>
+                    <p>Nous collectons des informations personnelles que vous nous fournissez directement lorsque vous interagissez avec notre site, telles que :</p>
+                    <ul>
+                        <li>Nom et prénom</li>
+                        <li>Adresse e-mail</li>
+                        <li>Numéro de téléphone</li>
+                        <li>Adresse postale (si applicable)</li>
+                        <li>Message dans le formulaire de contact</li>
+                    </ul>
+                    <p>Ces données sont collectées notamment lors de :</p>
+                    <ul>
+                        <li>L’envoi d’un formulaire de contact</li>
+                        <li>L’inscription à une newsletter</li>
+                        <li>Toute autre communication via le site</li>
+                    </ul>
+
+                    <h3>2.2. Données collectées automatiquement</h3>
+                    <p>Lors de votre navigation sur notre site, certaines données sont collectées automatiquement, telles que :</p>
+                    <ul>
+                        <li>Adresse IP</li>
+                        <li>Informations sur l’appareil utilisé (type de navigateur, système d'exploitation, etc.)</li>
+                        <li>Données de navigation (pages visitées, temps passé sur le site)</li>
+                    </ul>
+                    <p>Ces données sont utilisées pour améliorer l’expérience utilisateur et assurer la sécurité du site.</p>
+
+                    <h2>ARTICLE 3 : FINALITÉS DE LA COLLECTE DES DONNÉES</h2>
+                    <p>Les données collectées sont traitées pour répondre à vos demandes, gérer la relation client, et améliorer l'expérience utilisateur.</p>
+
+                </div>
+
+                <!-- Colonne droite -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+
+                    <h2>ARTICLE 4 : BASE LÉGALE DU TRAITEMENT DES DONNÉES</h2>
+                    <p>Le traitement des données repose sur les bases légales suivantes :</p>
+                    <ul>
+                        <li>Consentement explicite : lors de la soumission de formulaires ou abonnements.</li>
+                        <li>Exécution d’un contrat : en cas de prestation via le site.</li>
+                        <li>Respect d’obligations légales : pour la conservation de certaines données.</li>
+                    </ul>
+
+                    <h2>ARTICLE 5 : TRANSMISSION DES DONNÉES À DES TIERS</h2>
+                    <p>Nous ne transmettons vos données à des tiers qu'avec votre consentement, sauf en cas d'obligation légale ou de demande des autorités.</p>
+
+                    <h2>ARTICLE 6 : DURÉE DE CONSERVATION DES DONNÉES</h2>
+                    <p>Vos données sont conservées uniquement pour la durée nécessaire aux finalités prévues, ou selon la législation en vigueur.</p>
+
+                    <h2>ARTICLE 7 : DROITS DES UTILISATEURS</h2>
+                    <p>Vous disposez de droits sur vos données (accès, rectification, effacement, etc.). Pour exercer vos droits, contactez-nous via [adresse e-mail ou postale].</p>
+
+                    <h2>ARTICLE 8 : SÉCURITÉ DES DONNÉES</h2>
+                    <p>Nous mettons en œuvre toutes les mesures nécessaires pour protéger vos données, mais nous ne pouvons garantir une sécurité absolue.</p>
+
+                    <h2>ARTICLE 9 : UTILISATION DES COOKIES</h2>
+                    <p>Des cookies sont utilisés pour améliorer l’expérience utilisateur et analyser le trafic. Vous pouvez gérer vos préférences via les paramètres de votre navigateur.</p>
+
+                    <h2>ARTICLE 10 : HÉBERGEMENT DES DONNÉES</h2>
+                    <p>Le site est hébergé par [Nom de l’hébergeur], à l’adresse suivante : [Adresse du siège de l’hébergeur].</p>
+
+                    <h2>ARTICLE 11 : MODIFICATIONS DE LA POLITIQUE</h2>
+                    <p>Cette Politique peut être modifiée. La version révisée sera publiée sur cette page.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright Start -->
+    {% include('_partial/_copyright.html.twig') %}
+    <!-- Copyright End -->
+
+    <!-- Back to Top -->
+    {% include('_partial/_backtoptop.html.twig') %}
+
+{% endblock %}

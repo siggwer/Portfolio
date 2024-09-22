@@ -7,7 +7,7 @@ parameters:
     locale: 'fr'
     paramsMailApp:
         name: 'Jérôme Sauvage'
-        email: 'test@test.com'
+        email: 'jerome.sauvage@etu.unilim.fr'
 services:
     # default configuration for services in *this* file
     _defaults:
@@ -29,9 +29,6 @@ services:
         resource: '../src/UI/Action'
         tags: ['controller.service_arguments']
 
-    # add more service definitions when explicit configuration is needed
-    # please note that last definitions always *replace* previous ones
-
     App\UI\Handler\ContactHandler:
         arguments:
             $eventDispatcher: '@event_dispatcher'
@@ -44,12 +41,5 @@ services:
     App\UI\Service\FlashService:
         autowire: true
 
-#        tags:
-#            - { name: 'kernel.event_listener', event: 'app.flash_message' }
-#            - { name: 'kernel.event_subscriber' }
-#            - { name: 'kernel.event_listener', event: 'kernel.response', method: 'onKernelResponse' }
-
-#    App\UI\Service\FlashService:
-#        tags:
-#            - { name: 'kernel.event_listener', event: App\UI\Event\ContactMailEvent, method: 'onContactMail' }
-#
+    # add more service definitions when explicit configuration is needed
+    # please note that last definitions always *replace* previous ones

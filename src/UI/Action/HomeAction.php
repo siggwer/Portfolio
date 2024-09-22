@@ -14,15 +14,9 @@ use App\Domain\Dto\ContactDto;
 class HomeAction extends AbstractController
 {
     /**
-     * @param ContactHandler $contactHandler
-     */
-    public function __construct(private readonly ContactHandler $contactHandler)
-    {
-    }
-
-    /**
      * @param Request $request
      * @param ContactHandler $contactHandler
+     *
      * @return Response
      */
     #[Route('/', name: 'app_home', methods: ['GET', 'POST'])]
@@ -31,14 +25,14 @@ class HomeAction extends AbstractController
         ContactHandler $contactHandler
     ): Response
     {
-        if ($this->contactHandler->handle($request, new ContactDto())) {
+        if ($contactHandler->handle($request, new ContactDto())) {
             return $this->redirectToRoute('app_home');
         }
 
         return $this->render(
             'home/index.html.twig',
             [
-                'contactForm' => $this->contactHandler->createView(),
+                'contactForm' => $contactHandler->createView(),
             ]
         );
     }

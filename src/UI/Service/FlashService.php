@@ -4,38 +4,37 @@ declare(strict_types=1);
 
 namespace App\UI\Service;
 
+use Symfony\Component\HttpFoundation\Session\Flash\FlashBagInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 readonly class FlashService
 {
     /**
-     * @var bool|null
+     * @var FlashBagInterface
      */
-    private ?bool $handlingResult;
+    private FlashBagInterface $flashBag;
 
     /**
      * @param RequestStack $requestStack
      */
     public function __construct(private RequestStack $requestStack)
     {
-        $this->handlingResult = null;
-
+        // Récupérer la session et le flash bag
+        $session = $this->requestStack->getSession();
+        $this->flashBag = $session->getFlashBag();
     }
 
     /**
-     * @param string $type
-     * @param string $message
+     * Ajouter un message flash à la session.
+     *
+     * @param string $type Le type de message (e.g. 'success', 'error').
+     * @param string $message Le message à afficher.
      *
      * @return void
      */
     public function addMessage(string $type, string $message): void
     {
-        if ($this->handlingResult !== null) {
-            if ($this->handlingResult) {
-                $this->requestStack->getSession()->getFlashBag()->add($type, $message);
-            } else {
-                $this->requestStack->getSession()->getFlashBag()->add('error', 'Une erreur s\'est produite lors du traitement.');
-            }
-        }
+        // Ajoute directement le message flash
+        $this->flashBag->add($type, $message);
     }
 }

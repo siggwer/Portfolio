@@ -1,12 +1,18 @@
 <div class="container-fluid footer text-white py-4">
     <div class="container">
-        <div class="row">
-            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                <a>&copy;</a> <a class="border-bottom text-secondary" href="#">Jérôme Sauvage</a>, <a>All Right Reserved.</a>
+        <div class="row d-flex justify-content-center align-items-center"> <!-- Modification ici -->
+            <div class="col-md-4 text-center mb-3 mb-md-0">
+                <a class="border-bottom text-secondary" href="#">Jérôme Sauvage</a>, <a>All Right Reserved.</a>
             </div>
-            <div class="col-md-6 text-center text-md-end">
-                <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                <a>Designed< By </a>  <a class="border-bottom text-secondary" href="https://htmlcodex.com">HTML Codex</a>
+            <div class="col-md-4 text-center mb-3 mb-md-0">
+                <div class="footer-links">
+                    <a class="text-white important-link" href="#">Plan du site</a>
+                    <a class="text-white important-link" href="{{ path('app_mention') }}">Mentions légales</a>
+                    <a class="text-white important-link" href="{{ path('app_politique') }}">Politique de confidentialité</a>
+                </div>
+            </div>
+            <div class="col-md-4 text-center text-md-end">
+                <a>Designed By</a> <a class="border-bottom text-secondary" href="https://htmlcodex.com">HTML Codex</a>
                 <br><a>Distributed By:</a> <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
             </div>
         </div>

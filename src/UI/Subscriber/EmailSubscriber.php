@@ -33,11 +33,6 @@ class EmailSubscriber implements EventSubscriberInterface
      */
     public function onContact(ContactEvent $event) :void
     {
-//        $from = [
-//            'email' => 'admin.snowtrick@yopmail.com',
-//            'name' => 'Contact',
-//        ];
-
         $to = [
             'email' => $event->getEmail(),
             'name' => explode('@', $event->getEmail())[0],
@@ -55,23 +50,7 @@ class EmailSubscriber implements EventSubscriberInterface
         $this->mailerService->sendContactEmail(
             $to['email'],
             $subject,
-//            $from,
             $data
-
-//            'contact/contact_email.html.twig',
-//
-//            [
-//
-//                'message' => $event->getMessage(),
-//
-//                'subject' => $event->getSubject(),
-//
-//                'name' => $event->getName(),
-//
-//                'email' => $event->getEmail()
-//
-//            ]
-
         );
     }
 }
