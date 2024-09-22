@@ -6,8 +6,8 @@
 parameters:
     locale: 'fr'
     paramsMailApp:
-        name: 'Jérôme Sauvage'
-        email: 'jerome.sauvage@etu.unilim.fr'
+        name: ''
+        email: ''
 services:
     # default configuration for services in *this* file
     _defaults:
