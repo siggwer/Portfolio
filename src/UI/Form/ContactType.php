@@ -4,10 +4,12 @@ declare(strict_types=1);
 
 namespace App\UI\Form;
 
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\IsTrue;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\AbstractType;
 use App\Domain\Dto\ContactDto;
@@ -27,7 +29,7 @@ class ContactType extends AbstractType
                 'name',
                 TextType::class,
                 [
-                'label' => 'votre nom :',
+                'label' => 'votre nom : *',
                 'attr' => array(
                    'placeholder' => 'Votre nom ',
                 ),
@@ -37,7 +39,7 @@ class ContactType extends AbstractType
                 'email',
                 EmailType::class,
                 [
-                'label' => 'votre email :',
+                'label' => 'votre email : *',
                 'attr' => array(
                    'placeholder' => 'Votre email ',
                 ),
@@ -47,7 +49,7 @@ class ContactType extends AbstractType
                 'subject',
                 TextType::class,
                 [
-                'label' => 'Sujet :',
+                'label' => 'Sujet : *',
                 'attr' => array(
                    'placeholder' => 'Indiquez un sujet ',
                 ),
@@ -57,12 +59,20 @@ class ContactType extends AbstractType
                 'message',
                 TextareaType::class,
                 [
-                'label' => 'votre message :',
+                'label' => 'votre message : *',
                 'attr' => array(
                    'placeholder' => 'Ecrivez votre message',
                 ),
                 ]
-            );
+            )
+            ->add('consent', CheckboxType::class, [
+                'label' => "J'accepte que mes données personnelles soient utilisées pour me recontacter. Aucun autre traitement ne sera effectué avec mes informations.",
+                'mapped' => false,
+                'constraints' => [
+                    new IsTrue(['message' => 'Vous devez accepter notre politique de confidentialité pour soumettre ce formulaire.']),
+                ]
+             ])
+        ;
     }
 
     /**

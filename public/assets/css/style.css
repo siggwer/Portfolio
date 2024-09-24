@@ -421,14 +421,6 @@ a:hover {
 }
 
 .circle {
-    /*width: 100px;*/
-    /*height: 100px;*/
-    /*background-color: #5c6c7c;*/
-    /*border-radius: 50%;*/
-    /*display: flex;*/
-    /*align-items: center;*/
-    /*justify-content: center;*/
-    /*position: relative;*/
     width: 50px; /* Taille réduite */
     height: 50px; /* Taille réduite */
     background-color: #5c6c7c;
@@ -539,32 +531,152 @@ a:hover {
 }
 
 /* Mention */
+/* Centrer le titre h1 */
+#mention h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+/* Ligne décorative sous le titre h1 */
+#mention h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary);
+    margin: 10px auto;
+}
+
+/* Centrer les sous-titres h2 avec des icônes Font Awesome */
+#mention h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+}
+
+/* Style des icônes Font Awesome dans les h2 */
+#mention h2 i {
+    margin-right: 10px;
+    color: var(--primary);
+}
+
+/* Barre de séparation centrée sous chaque h2 */
+.separator {
+    border: none;
+    height: 2px;
+    background-color: #ddd;
+    width: 60px; /* Ajuste la largeur de la barre */
+    margin: 0 auto 20px auto;
+}
+
+/* Centrer le contenu des paragraphes */
+#mention p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: center; /* Centrer le texte des paragraphes */
+}
+
+/* Surlignage des informations importantes dans les paragraphes */
+#mention p strong {
+    font-weight: 700;
+    color: #222;
+}
+
+/* Style des liens */
+#mention a {
+    color: var(--primary);
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block; /* Chaque lien sur une ligne à part */
+    text-align: center; /* Centrer les liens */
+}
+
+/* Effet hover sur les liens */
+#mention a:hover {
+    color: #FF5733;
+    text-decoration: underline;
+}
+/* Ul LI */
+#mention ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+#mention ul li {
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#mention ul li::before {
+    margin-right: 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Bordure autour des sections */
+#mention .col-lg-12 {
+    border-left: 5px solid var(--primary);
+    padding-left: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center; /* Centrer le contenu des colonnes */
+}
+
+/* Progress bar styles */
 #mention .progress {
     height: 5px;
     border-radius: 5px;
 }
 
+/* Progress bar animation */
 #mention .progress .progress-bar {
     width: 0px;
     border-radius: 5px;
     transition: 3s;
 }
 
+/* Nav pills styles */
 #mention .nav-pills .nav-link {
     color: var(--dark);
 }
 
+/* Active state for nav pills */
 #mention .nav-pills .nav-link.active {
     color: #FFFFFF;
 }
 
+/* Styling for horizontal rules within tab content */
 #mention .tab-content hr {
     width: 30px;
 }
 
-/* Nouveau style pour centrer le titre h1 */
-#mention h1 {
-    text-align: center;
+/* Responsive adjustments for better viewing on smaller screens */
+@media (max-width: 768px) {
+    #mention h1 {
+        font-size: 2rem;
+    }
+
+    #mention h2 {
+        font-size: 1.5rem;
+    }
+
+    #mention p {
+        font-size: 0.9rem;
+    }
 }
 
 /* Footer */

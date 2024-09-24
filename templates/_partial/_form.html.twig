@@ -1,5 +1,6 @@
 {{ form_start(contactForm) }}
 {{ form_errors(contactForm) }}
+{{ form_errors(contactForm) }}
 {{ form_widget(contactForm._token) }}
 <div class="col-md-6">
     <div class="form-floating">
@@ -35,6 +36,22 @@
             'label_attr': {'class': 'form-label'}
         }) }}
     </div>
+</div>
+
+<div class="col-12">
+    <!-- Ajout de la case à cocher pour le consentement -->
+    <div class="form-check">
+        {{ form_row(contactForm.consent) }}
+    </div>
+
+    <!-- Ajout du texte explicatif -->
+    <p class="small-text">* Champ obligatoire</p>
+    <p class="small-text">
+        En soumettant ce formulaire, j'accepte que mes données personnelles soient utilisées pour me recontacter.
+        Aucun autre traitement ne sera effectué avec mes informations.
+        Pour connaître et exercer vos droits, veuillez consulter
+        notre <a href="{{ path('app_politique') }}">Politique de confidentialité</a>.
+    </p>
 </div>
 
 <div class="col-12">
